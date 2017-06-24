@@ -1,0 +1,371 @@
+/*@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+*/
+body{
+  margin:0;
+
+}
+.border-box-item{
+  box-sizing: border-box;
+}
+.contact-field{
+  height:30px;
+  width:90%; 
+  font-size:20px; 
+  margin:5px;
+  border-radius:3px;
+}
+.footer{
+  background: rgba(26,26,26,.7); 
+  color:rgba(255,255,255,.6);
+  padding:50px 0;
+  text-align: center; 
+}
+.footer .brand-name{
+  color:rgb(255,255,255);
+}
+
+.footer-about{
+  box-sizing: border-box; 
+  text-align: inherit; 
+  margin:0 auto; 
+ }
+
+.footer-about p{
+  position:relative; 
+  padding:25px 0; 
+  font: 20px; 
+  line-height: 25px; 
+}
+
+.footer-about p::after{
+  position:absolute; 
+  bottom:2px; 
+  left:0px; 
+  content:""; 
+  width:100%;
+  border-bottom:1px solid rgba(255,255,255,.6);
+}
+.footer-about-wrap, .footer-contact-wrap{
+  display: inline-block;
+  vertical-align: top;
+  text-align: initial;
+  width:50%; 
+  min-width: 400px;
+ 
+}
+.footer-contact-form {
+   box-sizing: border-box; 
+   width:90%;  
+}
+.footer-contact-form h2{
+  text-align: initial;
+}
+.footer-item-align{
+  width:80%;
+  margin:0 auto; 
+}
+.fullwidth-img{
+  width:100%;
+  height:auto;
+  margin-bottom:0;
+}
+
+.header{
+  background: rgb(7, 108, 126);
+  color:rgb(255,255,255);
+  position:relative;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.header .brand-name{
+  display: inline-block;
+  width:200px;
+  text-align:center;
+  font-family:'Monoton', cursive;
+  font-size: 16px;
+}
+ .header .brand-name h1{
+  margin:0;
+}
+
+.header button{
+  font-size: 18px;
+  background-color: rgb(7, 147, 52);
+  color:rgb(255,255,255);
+  border:0;
+  width:100px;
+  padding:5px;
+  margin:0 15px
+}
+
+.header .section-links{
+  display:inline-block;
+  position: absolute;
+  right:5px;
+  padding-top:10px;
+  height:100%;
+  width:300px;
+}
+.header .sign-up,  .log-in{
+  display: inline;
+}
+.grid-recipe, .grid-new-recipe{
+  vertical-align:top;
+  display:inline-block;
+  box-sizing: border-box;
+  background-color: rgb(255,255,255);
+  padding:0;
+  margin:1vw;
+}
+.grid-recipe{
+  width:18vw!important;
+  height: 25vw!important;
+  min-width: 200px;
+  min-height: 278px;
+}
+.grid-recipe .recipe h3{
+  font-size: 16px; 
+  color:rgb(133, 150, 160)
+}
+
+.grid-new-recipe{
+  position:relative;
+  background-color: rgb(255,255,255);
+  width:20vw!important;
+  min-width: 200px;
+  min-height: 300px;
+  padding-bottom:20px;
+}
+
+.ingredients{
+  display:inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: rgba(128, 128, 128,0.1);
+  width:65%;
+  height: 40vw;
+}
+.ingredient-header{
+ margin:0;
+ padding:15px 0;
+ color:rgba(255,255,255,.8);
+ font-size: 20px;
+ background-color: rgba(128, 128, 128,0.8);
+}
+
+.ingredient-list{
+  list-style-type: none; 
+  text-align: left;
+}
+
+.ingredient-list li{
+    border-bottom:1px solid gray;
+    line-height: 2em;  
+    font-size:16px;
+}
+
+#message{
+  width:95%;
+  height:150px;
+}
+
+.navbar{
+  font-family: signika, sans-serif;
+  text-align: center;
+  margin:0 auto;
+  padding:20px;
+}
+
+.navbar a {
+  font-size:25px;
+  margin:0 2vw;
+  text-decoration:none;
+}
+
+.new-recipe-header{
+  font-size:30px;
+  font-weight: 800;
+  margin:0; 
+}
+
+.new-recipe-header h1{
+  color:rgb(0,0,0);
+  margin:0;
+}
+.new-recipe-header p{
+  font-size: 18px;
+}
+.new-recipe-list{
+  text-align: center;
+  padding:100px 0;
+  color:rgb(133, 150, 160);
+  background: rgba(149,149,149,0.15);
+}
+.new-recipe{
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.new-recipe-wrap{
+  width:200px;
+  margin: 15px auto; 
+  box-sizing: border-box;
+}
+
+.recipe{
+  box-sizing: border-box;
+  text-decoration: none;
+  margin:1vw;
+}
+.recipe-box{
+  width:60%;
+  margin:0 auto;
+}
+
+.recipe h1{
+  font-size: 2vw;
+}
+
+.recipe-list {
+  text-align: center; 
+  background-color: rgb(197, 206, 212);
+  padding: 100px 0; 
+  color:rgb(133, 150, 160)
+}
+
+.single-recipe{
+  box-sizing: border-box;
+  text-align: center;
+}
+.single-recipe .recipe-wrap{
+  display: inline-block;
+  vertical-align: top; 
+  font-size:18px;
+  width:35%;
+  height: 40vw;
+  min-width: 200px;
+  min-height: 250px;
+  box-sizing: border-box;
+}
+
+.slider{
+  position:relative;
+  height:35vw;
+  overflow-y: hidden;
+  background: rgb(74, 58, 86);
+}
+.slider-image{
+  width:100%;
+  height:auto; 
+  vertical-align:middle;
+  max-width:none;
+  z-index:-1;
+}
+.slider-item{
+  display: inline-block;
+  vertical-align: top; 
+ /* position:absolute;
+  top:0; 
+  left:0;*/
+  width:100%;
+  height:35vw; 
+  border: 1px solid green;
+}
+
+.slider-image{
+  width:100%; 
+  height: auto; 
+}
+.slider-text{
+  font-weight:300;
+  margin:0 auto;
+}
+.slider-text-wrapper{
+  position:absolute;
+  top:0;
+  font-size:3vw;
+  text-align:center;
+  color:rgb(255,255,255);
+  width:100%;
+  background:rgba(0,0,0,0.6);
+}
+
+.user-name{
+  margin:0;
+}
+
+.user-pic{
+  display: inline-block;
+  transform: translateY(-25px);
+  width:50px; 
+  height:50px;
+  background-color: rgba(145,145,145,1);
+  border:1.5px rgb(255,255,255) solid; 
+  border-radius: 50%;
+  margin:0 auto;
+}
+.toggle{
+  display: none;
+}
+
+
+@media screen and (max-width:768px) {
+
+.collapse {
+  display: none;
+}
+
+.icon-bar{
+  display: block;
+  margin: 0 1px;
+  padding:0;
+  height:5px;
+}
+
+.icon-bar::after{
+    content: '';
+    position: absolute;
+    left:0;
+    right: 0;
+    margin:0 auto;
+    height: 2px;
+    background-color: rgb(0,0,255);
+    clear: both;
+    width:50%;
+}
+.navbar{
+  position:relative;
+  padding-top:0;
+  padding-bottom: 0; 
+  height: 50px;
+}
+.show{
+  display:inline-block;
+  background: rgb(32, 38, 41);
+  color: rgba(255,255,255,0.7);
+  width: 100%;
+  margin:0;
+  padding: 0;
+  position:absolute;
+  top:3.2rem;
+  left:0;
+  z-index: 333;
+}
+
+.toggle{
+  display: inline-block !important;
+  vertical-align: top;
+  position:absolute;
+  left: 5px;
+  top:5px; 
+  width: 40px;
+  height: 40px;
+  padding:0;
+  border:1px solid black!important;
+  }
+
+
+
+
+}
