@@ -6,9 +6,8 @@ var recettesImages = [
   "poelee_gambas.jpg",
   "salade_de_fruits_de_saison.jpg"
 ];
-//var imagesPath = "app/img/recipes/";
-var imagesPath ="https://github.com/KokuKUSIAKU/recipebox/blob/master/app/img/recipes/"
 
+const imagesPath = "https://github.com/KokuKUSIAKU/recipebox/blob/master/app/img/recipes/"
 
 class Slider extends React.Component {
   constructor(props) {
@@ -18,11 +17,28 @@ class Slider extends React.Component {
     }
   }
 
+  componentDidMount() {
+    var images = document.querySelectorAll('.slider-image-wrapper');
+    console.log(images);
+    images[0].classList.add('slider-animate');
+  }
 
   render() {
     return (
       <div className='slider'>
-        <img className="slider-image" src={imagesPath+recettesImages[2]+'?raw=true'} alt='image unavailable' />
+        {recettesImages.map((recette, index) => (
+          <article className="slider-item" key={index}>
+            <div className="slider-image-wrapper" >
+              <img className="slider-image"
+                src={imagesPath + recettesImages[index] + '?raw=true'}
+                data-index={index}
+                style={{ 'zIndex': -1 + 5 * index }}
+                alt="image unavailable" />
+            </div>
+          </article>
+
+        ))}
+
         <div className="slider-text-wrapper">
           <div className="slider-text">
             <p>Where cooking amateurs & lovers meet! </p>
@@ -33,4 +49,5 @@ class Slider extends React.Component {
   }
 
 };
+
 export default Slider;
