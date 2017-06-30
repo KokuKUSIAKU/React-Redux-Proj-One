@@ -18,12 +18,13 @@ function mapStateToProps(state) {
     }
 }
 
+
 function mapDispachToProps(dispatch) {
     return bindActionCreators(actionCreators, dispatch)
 }
 
-const Page = connect(
+const RecipePage = connect(
     mapStateToProps,
 )(Main);
 
-export default Page; 
+export default RecipePage; 

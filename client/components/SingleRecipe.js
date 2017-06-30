@@ -1,6 +1,7 @@
 import React from 'react';
 import Recipe from './Recipe';
 import Ingredients from './Ingredients';
+
 class SingleRecipe extends React.Component {
     constructor(props) {
         super(props)
@@ -13,12 +14,12 @@ class SingleRecipe extends React.Component {
         const recipe = this.props.recipes[index];
         return (
             <div className="single-recipe">
-                <div className="recipe-wrap">
+                <div className="recipe-wrap single-recipe-div">
                     <div className="recipe-box">
                         <Recipe recipe={recipe} title="top" />
                     </div>
                 </div>
-                <div className="ingredients">
+                <div className="ingredients single-recipe-div">
                     <h2 className="ingredient-header"> INGREDIENTS </h2>
                     <Ingredients ingredients={recipe.ingredients}></Ingredients>
                 </div>

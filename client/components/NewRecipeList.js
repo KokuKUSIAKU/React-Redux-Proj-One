@@ -1,5 +1,5 @@
 import React from 'react';
-import User from './User';
+import NewRecipe from './NewRecipe';
 
 class NewRecipeList extends React.Component {
     constructor(props) {
@@ -13,7 +13,7 @@ class NewRecipeList extends React.Component {
                     <p> Morbi lectus turpis, pulvinar at diam eget, tempus congue dolor. </p>
                 </header>
                 
-                {this.props.newrecipelist.map((recipe,index) => <User recipe={recipe} key={index} />)}
+                {this.props.newrecipelist.map((recipe,index) => <NewRecipe recipe={recipe} key={index} />)}
             </article>
         )
     }

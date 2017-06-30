@@ -1,22 +1,24 @@
-import { bindActionCreators } from 'redux'; 
-import { connect } from 'react-redux'; 
-import* as actionCreators from '../actions'; 
+import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as actionCreators from '../actions';
 
-import Main from './Main'
+import Main from './Main'; 
+import Header from './Header';
+import Footer from './Footer';
 
-function mapStateToProps(state){
-    var recipes= state.filter=='all'|| !state.filter?state.recipes:state.recipes.filter(recipe=>recipe.type ===state.filter);
-     return{
-        recipes,
-        filter:state.filter
-    }
-}
+import NavBar from '../containers/NavBar';
+import Page from '../containers/Main'
+import HomePage from '../containers/HomePage';
+ 
 
-
-function mapDispachToProps(dispatch){
-    return bindActionCreators(actionCreators, dispatch)
-}
-
-const App = connect(mapStateToProps, mapDispachToProps)(Main); 
+const App = (props) =>(
+    <div className="main">
+        <Header/>
+        <NavBar/>
+        {props.children}
+        <Footer/>
+    </div>
+)
 
 export default App;

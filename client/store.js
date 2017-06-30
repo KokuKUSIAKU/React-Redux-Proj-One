@@ -7,9 +7,9 @@ import {browserHistory } from 'react-router';
 
 import rootReducer from './reducers/index'; 
 import recipes from './data/recipes';
-import newrecipes from './data/newrecipes';
+//import newrecipes from './data/newrecipes';
 const filter ="";
-
+const newrecipes =[7,6,2];
 const defaultState = {
     recipes, 
     filter, 
